@@ -1,5 +1,5 @@
 /**
- * this a package example
+ * this a package example.
  *
  * @author lfmparente
  *
