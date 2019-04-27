@@ -20,4 +20,24 @@ public class Greeter {
   public final String greet(final String someone) {
     return String.format("Hello, %s!", someone);
   }
+
+  public final boolean getSomething() {
+      Boolean isLie = false;
+
+      if(isLie) {
+          return true;
+      }else {
+          return false;
+      }
+  }
+
+    public final boolean getAnotherThing() {
+        Boolean isLie = false;
+
+        if(isLie) {
+            return true;
+        }else {
+            return false;
+        }
+    }
 }
