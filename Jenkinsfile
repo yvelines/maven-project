@@ -12,17 +12,18 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('FakeBuild') {
             steps {
                 echo 'Building..'
             }
         }
-        stage('Test') {
+
+        stage('FakeTest') {
             steps {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('FakeDeploy') {
             steps {
                 echo 'Deploying....'
             }
