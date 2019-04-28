@@ -11,5 +11,21 @@ pipeline {
                 sh 'mvn -B -DskipTests=false clean package'
             }
         }
+
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
