@@ -10,11 +10,17 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests=false clean package'
             }
+            post {
+                success {
+                    echo 'Now Archiving...'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+            }
         }
 
-        stage('FakeBuild') {
+        stage('Deploy to staging') {
             steps {
-                echo 'Building..'
+                build job: 'deploy-to-staging'
             }
         }
 
